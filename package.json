@@ -1,6 +1,6 @@
 {
   "name": "likanode",
-  "description": "node.js rewrite of [likamag|http://github.com/zemlanin/likamag]",
+  "description": "node.js rewrite of [likamag](http://github.com/zemlanin/likamag)",
   "repository": "http://github.com/zemlanin/likanode",
   "version": "1.0.0",
   "dependencies": {
