@@ -1,0 +1,17 @@
+{
+  "name": "likanode",
+  "description": "node.js rewrite of [likamag|http://github.com/zemlanin/likamag]",
+  "repository": "http://github.com/zemlanin/likanode",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "~4.1.0",
+    "sqlite3": "~2.2.3",
+    "consolidate": "~0.10.0",
+    "mustache": "~0.8.1",
+    "node-cache": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-ender": "~0.2.1"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules
+.grunt
+static/build
+*.sqlite
