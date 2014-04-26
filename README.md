@@ -1,7 +1,9 @@
-node.js rewrite of [likamag|http://github.com/zemlanin/likamag]
+node.js rewrite of [likamag](http://github.com/zemlanin/likamag)
 
-= Build
+Now with proper code assembly
+
+## Build ##
 	
-	npm install ender -g
+    npm install ender -g
     npm install
     grunt ender database
