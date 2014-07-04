@@ -1,10 +1,5 @@
 'use strict';
-var NodeCache = require('node-cache');
-
-var appCache = new NodeCache();
-var appCacheGet = function appCacheGet(key) {
-  return appCache.get(key)[key]
-}
+var appCache = {};
 
 var codeset = 'omyg5dNIF81Uiws4hzeKPBJX9lack72bj0xvqyrOMYGDRW6SHZnfu3ELACVQY';
 var base = codeset.length;
@@ -14,8 +9,8 @@ var encode = function encode(id) {
   if (isNaN(id)) {
     return null;
   }
-  if (appCacheGet("to_"+id)) {
-    return appCacheGet("to_"+id);
+  if (appCache["to_"+id] !== undefined) {
+    return appCache["to_"+id];
   }
 
   var position;
@@ -27,13 +22,13 @@ var encode = function encode(id) {
     encoded = [codeset[position], encoded].join('');
     iter_id = Math.floor(iter_id / base);
   }
-  appCache.set("to_"+id, encoded);
+  appCache["to_"+id] = encoded;
   return encoded;
 }
 
 var decode = function decode(encoded) {
-  if (appCacheGet("from_"+encoded)) {
-    return appCacheGet("from_"+encoded);
+  if (appCache["from_"+encoded] !== undefined) {
+    return appCache["from_"+encoded];
   }
 
   var id = 0;
@@ -42,7 +37,7 @@ var decode = function decode(encoded) {
     id += codeset.search(encoded[i-1])*Math.pow(base, encoded.length-i);
   }
 
-  appCache.set("from_"+encoded, id);
+  appCache["from_"+encoded] = id;
   return id;
 }
 
