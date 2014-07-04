@@ -1,4 +1,4 @@
 node_modules
 .grunt
-static/build
+public/build
 *.sqlite
