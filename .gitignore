@@ -2,3 +2,4 @@ node_modules
 .grunt
 public/build
 *.sqlite
+.DS_Store
